@@ -96,14 +96,13 @@ Import the Elasticsearch signing key and update your APT sources list to include
 
 ```bash
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
 Install the Java Virtual on the VM and configure the JAVA_HOME variable-this is necessary for the Elastic Stack components to run.
 
 ```bash
-sudo apt update && sudo apt install openjdk-8-jre-headless
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+sudo apt update && sudo apt install openjdk-21-jre-headless
 ```
 
 Run the following commands to update Ubuntu package sources and install Elasticsearch, Kibana, and Logstash.
